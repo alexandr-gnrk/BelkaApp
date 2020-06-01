@@ -32,4 +32,14 @@
         android:name="com.example.belkaapp.ui.user.UserFragment"
         android:label="Акаунт"
         tools:layout="@layout/user_fragment" />
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.example.belkaapp.ui.events.EventsFragment"
+        android:label="Заходи"
+        tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/suggestFragment"
+        android:name="com.example.belkaapp.ui.suggest.SuggestFragment"
+        android:label="Запропонувати"
+        tools:layout="@layout/fragment_suggest" />
 </navigation>
