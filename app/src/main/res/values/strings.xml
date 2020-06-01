@@ -31,14 +31,5 @@
     <string name="squirrel_with_laptop">Squirrel with laptop</string>
     <string name="ear">ear</string>
     <string name="human_smile">human smile</string>
-    <string-array name="reports_array">
-        <item>Закінчився чай</item>
-        <item>Закінчився цукор</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
-    </string-array>
+    <string name="menu_user">Акаунт</string>
 </resources>
