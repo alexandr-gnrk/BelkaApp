@@ -23,11 +23,6 @@
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
-        android:id="@+id/nav_report"
-        android:name="com.example.belkaapp.ReportFragment"
-        android:label="@string/menu_report"
-        tools:layout="@layout/fragment_report" />
-    <fragment
         android:id="@+id/nav_user"
         android:name="com.example.belkaapp.ui.user.UserFragment"
         android:label="Акаунт"
@@ -42,4 +37,9 @@
         android:name="com.example.belkaapp.ui.suggest.SuggestFragment"
         android:label="Запропонувати"
         tools:layout="@layout/fragment_suggest" />
+    <fragment
+        android:id="@+id/informFragment"
+        android:name="com.example.belkaapp.ui.inform.InformFragment"
+        android:label="Повідомити"
+        tools:layout="@layout/fragment_inform" />
 </navigation>

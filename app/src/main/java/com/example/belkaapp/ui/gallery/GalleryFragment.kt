@@ -1,6 +1,7 @@
 package com.example.belkaapp.ui.gallery
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +27,7 @@ class GalleryFragment : Fragment() {
         galleryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        Log.i("GalleryFragment", "GalleryFragment created!")
         return root
     }
 }

@@ -17,10 +17,6 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/nav_report"
-            android:icon="@drawable/visibility_black"
-            android:title="@string/menu_report" />
-        <item
             android:id="@+id/nav_user"
             android:icon="@drawable/account_box_24px"
             android:title="@string/menu_user" />
@@ -32,5 +28,9 @@
             android:id="@+id/suggestFragment"
             android:icon="@drawable/lamp_icon"
             android:title="Запропонувати" />
+        <item
+            android:id="@+id/informFragment"
+            android:icon="@drawable/visibility_black"
+            android:title="Повідомити" />
     </group>
 </menu>

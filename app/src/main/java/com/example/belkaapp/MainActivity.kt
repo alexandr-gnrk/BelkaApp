@@ -1,7 +1,9 @@
 package com.example.belkaapp
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
+import android.widget.TextView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -14,18 +16,20 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
-import com.example.belkaapp.databinding.ActivityMainBinding
+import org.w3c.dom.Text
+//import com.example.belkaapp.databinding.
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
+//    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+//        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
@@ -41,8 +45,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        Log.i("MainActivity", "Started")
+        val text: TextView? = findViewById<TextView>(R.id.text_home)
+        Log.i("MainActivity", text?.text.toString())
+//        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
