@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.belkaapp.R
 import com.example.belkaapp.databinding.FragmentEventsBinding
+import com.example.belkaapp.databinding.GridViewItemBinding
 
 
 class EventsFragment : Fragment() {
@@ -26,7 +27,7 @@ class EventsFragment : Fragment() {
         binding.setLifecycleOwner(this)
 
         binding.viewModel = viewModel
-
+        binding.photosGrid.adapter = PhotoGridAdapter()
         setHasOptionsMenu(true)
         return binding.root    
     }

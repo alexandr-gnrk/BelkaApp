@@ -31,12 +31,15 @@ import retrofit2.Response
 
 class EventsViewModel : ViewModel() {
 
-    private val _response = MutableLiveData<String>()
+    private val _status = MutableLiveData<String>()
 
     val response: LiveData<String>
-        get() = _response
+        get() = _status
 
+    private val _properties = MutableLiveData<List<EventProperty>>()
 
+    val properties: LiveData<List<EventProperty>>
+    get() = _properties
     private var viewModelJob = Job()
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main )
 
@@ -61,9 +64,12 @@ class EventsViewModel : ViewModel() {
             var getPropertiesDeferred = BelkaApi.retrofitService.getProperties()
             try {
                 var listResult = getPropertiesDeferred.await()
-                _response.value = "Success: ${listResult.size} Event properties retrieved"
+//                _response.value = "Success: ${listResult.size} Event properties retrieved"
+                if (listResult.size > 0) {
+                    _properties.value = listResult
+                }
             } catch (e: Exception) {
-                _response.value = "Failure: ${e.message}"
+                _status.value = "Failure: ${e.message}"
             }
         }
     }
