@@ -39,7 +39,6 @@ class InformViewModel : ViewModel() {
 
         Log.i("InformViewModel", "Check for gps coordinates")
         val user: User = Storage(context.value!!).loadUser()
-        Log.i("InformViewModel", user.id)
         var informProperty = InformProperty(Storage(context.value!!).loadUser().id, reas, descrip)
         BelkaApi.retrofitService.sendInform(informProperty).enqueue(object: Callback<ResponseProperty> {
             override fun onFailure(call: Call<ResponseProperty>?, t: Throwable?) {

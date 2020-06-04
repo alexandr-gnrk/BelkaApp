@@ -33,7 +33,6 @@ class SuggestFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_suggest, container, false
         )
-//        return inflater.inflate(R.layout.fragment_suggest, container, false)
         return binding.root
     }
 
@@ -50,18 +49,20 @@ class SuggestFragment : Fragment() {
         viewModel.eventDescription.observe(viewLifecycleOwner, Observer { new_description ->
             binding.eventDesciption.setText(new_description)
         })
+
+        viewModel.msg.observe(viewLifecycleOwner, Observer { new_msg ->
+            Toast.makeText(activity, new_msg, Toast.LENGTH_SHORT).show()
+        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.suggestButton.setOnClickListener {
-            val msg: String = viewModel.makeSuggestion(
+            viewModel.makeSuggestion(
                 binding.eventName.text.toString(),
                 binding.eventDate.text.toString(),
                 binding.eventDesciption.text.toString())
-            Toast.makeText(activity, msg,
-                Toast.LENGTH_SHORT).show()
         }
     }
 

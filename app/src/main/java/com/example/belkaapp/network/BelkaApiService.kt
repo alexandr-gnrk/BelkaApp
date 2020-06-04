@@ -17,7 +17,7 @@ import retrofit2.http.POST
 
 
 private const val BASE_URL = "http://192.168.1.2:5000/"
-
+//private const val BASE_URL = "http://176.8.99.240:5000/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -45,6 +45,10 @@ interface BelkaApiService {
 
     @POST("inform")
     fun sendInform(@Body informProperty: InformProperty):
+            Call<ResponseProperty>
+
+    @POST("new_events")
+    fun sendSuggest(@Body informProperty: SuggestProperty):
             Call<ResponseProperty>
 }
 
