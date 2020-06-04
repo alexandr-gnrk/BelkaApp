@@ -31,7 +31,11 @@
         android:id="@+id/eventsFragment"
         android:name="com.example.belkaapp.ui.events.EventsFragment"
         android:label="Заходи"
-        tools:layout="@layout/fragment_events" />
+        tools:layout="@layout/fragment_events" >
+        <action
+            android:id="@+id/action_eventsFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/suggestFragment"
         android:name="com.example.belkaapp.ui.suggest.SuggestFragment"
@@ -42,4 +46,13 @@
         android:name="com.example.belkaapp.ui.inform.InformFragment"
         android:label="Повідомити"
         tools:layout="@layout/fragment_inform" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.belkaapp.ui.detail.DetailFragment"
+        android:label="Деталі"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="selectedProperty"
+            app:argType="com.example.belkaapp.network.EventProperty" />
+    </fragment>
 </navigation>

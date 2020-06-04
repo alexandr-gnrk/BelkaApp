@@ -41,6 +41,11 @@ class EventsViewModel : ViewModel() {
 
     val properties: LiveData<List<EventProperty>>
         get() = _properties
+
+    private val _navigateToSelectedProperty = MutableLiveData<EventProperty>()
+    val navigateToSelectedProperty: LiveData<EventProperty>
+        get() = _navigateToSelectedProperty
+
     private var viewModelJob = Job()
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main )
 
@@ -77,9 +82,16 @@ class EventsViewModel : ViewModel() {
         }
     }
 
-
     override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()
+    }
+
+    fun displayPropertyDetails(eventProperty: EventProperty) {
+        _navigateToSelectedProperty.value = eventProperty
+    }
+
+    fun displayPropertyDetailsComplete() {
+        _navigateToSelectedProperty.value = null
     }
 }

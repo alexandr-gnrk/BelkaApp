@@ -43,8 +43,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="123dp"
+        android:layout_width="249dp"
+        android:layout_height="137dp"
         android:layout_marginTop="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,9 +59,8 @@
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="40dp"
-                android:layout_height="0dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
-                android:adjustViewBounds="true"
                 android:contentDescription="@string/tea_icon"
                 android:cropToPadding="true"
                 android:src="@drawable/emoji_tea" />
@@ -78,6 +77,7 @@
                 android:id="@+id/imageView6"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:adjustViewBounds="true"
                 android:contentDescription="@string/ear"
                 android:src="@drawable/hearing" />
         </LinearLayout>

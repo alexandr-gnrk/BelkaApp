@@ -10,4 +10,4 @@ class EventProperty(
     val name: String,
     val event_time: String,
     val details: String,
-    @Json(name = "image") val imgSrcUrl: String): Parcelable
+    @Json(name = "image") val imgSrcUrl: String) : Parcelable
