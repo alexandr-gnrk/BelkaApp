@@ -66,6 +66,9 @@ class InformFragment : Fragment() {
         viewModel.description.observe(viewLifecycleOwner, Observer { new_reason ->
             binding.descriptionText.setText(new_reason)
         })
+        viewModel.msg.observe(viewLifecycleOwner, Observer { new_msg ->
+            Toast.makeText(activity, new_msg, Toast.LENGTH_SHORT).show()
+        })
     }
 
     @SuppressLint("MissingPermission")
@@ -85,8 +88,8 @@ class InformFragment : Fragment() {
         var id: Int = radio_group.checkedRadioButtonId
         if (id != -1) {
             val radio:RadioButton =  view.findViewById(id)
-            val msg: String = viewModel.informAbout(radio.text.toString(), text_input.text.toString())
-            Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show()
+            viewModel.informAbout(radio.text.toString(), text_input.text.toString())
+//            Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show()
         }
         else{
             Toast.makeText(activity,"Спочатку виберіть причину", Toast.LENGTH_SHORT).show()

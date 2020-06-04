@@ -42,6 +42,10 @@ interface BelkaApiService {
     @POST("user")
     fun updateUser(@Body userProperty: UserProperty):
             Call<UserIdProperty>
+
+    @POST("inform")
+    fun sendInform(@Body informProperty: InformProperty):
+            Call<ResponseProperty>
 }
 
 
