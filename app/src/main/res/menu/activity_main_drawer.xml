@@ -3,34 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:checkableBehavior="all"
+        android:enabled="true"
+        android:visible="true">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-        <item
-            android:id="@+id/nav_user"
-            android:icon="@drawable/account_box_24px"
-            android:title="@string/menu_user" />
-        <item
             android:id="@+id/eventsFragment"
             android:icon="@drawable/event_icon"
             android:title="Заходи" />
+        <item
+            android:id="@+id/informFragment"
+            android:icon="@drawable/visibility_black"
+            android:title="Повідомити" />
         <item
             android:id="@+id/suggestFragment"
             android:icon="@drawable/lamp_icon"
             android:title="Запропонувати" />
         <item
-            android:id="@+id/informFragment"
-            android:icon="@drawable/visibility_black"
-            android:title="Повідомити" />
+            android:id="@+id/nav_user"
+            android:icon="@drawable/account_box_24px"
+            android:title="@string/menu_user" />
     </group>
 </menu>

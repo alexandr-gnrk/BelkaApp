@@ -51,9 +51,13 @@ class InformFragment : Fragment() {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_inform, container, false
         )
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
+//        val root = inflater.inflate(R.layout.fragment_inform, container, false)
 
-        return binding.root
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
+//        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val root = inflater.inflate(R.layout.fragment_inform, container, false)
+
+        return root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

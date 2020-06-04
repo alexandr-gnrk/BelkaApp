@@ -21,7 +21,7 @@
                 android:id="@+id/main_photo_image"
                 android:layout_width="0dp"
                 android:layout_height="266dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 app:imgageUrl="@{viewModel.selectedProperty.imgSrcUrl}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
