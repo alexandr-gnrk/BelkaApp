@@ -12,6 +12,7 @@ import kotlinx.coroutines.Deferred
 import retrofit2.Call
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
+import retrofit2.http.Body
 import retrofit2.http.POST
 
 
@@ -37,6 +38,10 @@ interface BelkaApiService {
     fun getProperties():
 //            Call<List<EventProperty>>
             Deferred<List<EventProperty>>
+
+    @POST("user")
+    fun updateUser(@Body userProperty: UserProperty):
+            Call<UserIdProperty>
 }
 
 

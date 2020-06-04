@@ -27,6 +27,7 @@ class UserFragment : Fragment() {
     private lateinit var viewModel: UserViewModel
     private lateinit var binding: UserFragmentBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,7 +36,6 @@ class UserFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.user_fragment, container, false
         )
-//        return inflater.inflate(R.layout.user_fragment, container, false)
         return binding.root
     }
 
@@ -56,12 +56,15 @@ class UserFragment : Fragment() {
             binding.editTextPhone.setText(new_user.phone_number)
             binding.editTextTextEmailAddress.setText(new_user.email)
         })
+        viewModel.msg.observe(viewLifecycleOwner, Observer { new_msg ->
+            Toast.makeText(activity, new_msg, Toast.LENGTH_SHORT).show()
+        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.saveButton.setOnClickListener {
-            val msg: String = viewModel.updateUser(
+            viewModel.updateUser(
                 User(
                     binding.editTextTextPersonName.text.toString(),
                     binding.editTextTextPersonName2.text.toString(),
@@ -69,7 +72,6 @@ class UserFragment : Fragment() {
                     binding.editTextTextEmailAddress.text.toString())
 
             )
-            Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show()
         }
     }
 
