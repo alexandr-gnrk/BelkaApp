@@ -7,15 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import com.example.belkaapp.R
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
-import com.google.android.material.textfield.TextInputEditText
 import com.example.belkaapp.databinding.FragmentSuggestBinding
-import com.example.belkaapp.ui.inform.InformViewModel
 
 class SuggestFragment : Fragment() {
 

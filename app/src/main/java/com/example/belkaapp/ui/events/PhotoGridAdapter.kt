@@ -32,11 +32,11 @@ class PhotoGridAdapter(private val onClickListener: OnClickListener): ListAdapte
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): PhotoGridAdapter.EventPropertyViewHolder {
+    ): EventPropertyViewHolder {
         return EventPropertyViewHolder(GridViewItemBinding.inflate(LayoutInflater.from(parent.context)))
     }
 
-    override fun onBindViewHolder(holder: PhotoGridAdapter.EventPropertyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: EventPropertyViewHolder, position: Int) {
         val eventProperty = getItem(position)
         holder.itemView.setOnClickListener {
             onClickListener.onClick(eventProperty)

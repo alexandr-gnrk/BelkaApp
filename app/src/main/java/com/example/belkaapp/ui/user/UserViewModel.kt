@@ -1,20 +1,15 @@
 package com.example.belkaapp.ui.user
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.belkaapp.network.BelkaApi
-import com.example.belkaapp.network.BelkaApiService
 import com.example.belkaapp.network.UserIdProperty
 import com.example.belkaapp.network.UserProperty
-import com.example.belkaapp.ui.events.BelkaApiStatus
 import com.example.belkaapp.ui.storage.Storage
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 class UserViewModel : ViewModel() {
     val user = MutableLiveData<User>()

@@ -51,11 +51,8 @@ class InformFragment : Fragment() {
         binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_inform, container, false
         )
-//        val root = inflater.inflate(R.layout.fragment_inform, container, false)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
-//        val root = inflater.inflate(R.layout.fragment_home, container, false)
-//        val root = inflater.inflate(R.layout.fragment_inform, container, false)
 
         return binding.root
     }
@@ -93,7 +90,7 @@ class InformFragment : Fragment() {
         if (id != -1) {
             val radio:RadioButton =  view.findViewById(id)
             viewModel.informAbout(radio.text.toString(), text_input.text.toString())
-//            Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show()
+
         }
         else{
             Toast.makeText(activity,"Спочатку виберіть причину", Toast.LENGTH_SHORT).show()

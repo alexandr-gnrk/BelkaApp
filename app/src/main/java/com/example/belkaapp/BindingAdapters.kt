@@ -10,8 +10,6 @@ import com.example.belkaapp.network.EventProperty
 import com.example.belkaapp.ui.events.BelkaApiStatus
 import com.example.belkaapp.ui.events.PhotoGridAdapter
 
-//import com.example.meetplanner.network.OverviewMeetingProperty
-//import com.example.meetplanner.overview.OverviewAdapter
 
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<EventProperty>?) {

@@ -5,9 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.belkaapp.network.EventProperty
 
-/**
- * Simple ViewModel factory that provides the MarsProperty and context to the ViewModel.
- */
+
+// ViewModel factory that provide the EventProperty and context to the ViewModel
 class DetailViewModelFactory(
     private val marsProperty: EventProperty,
     private val application: Application) : ViewModelProvider.Factory {
